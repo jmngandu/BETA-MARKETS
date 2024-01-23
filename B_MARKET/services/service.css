@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 560px; */
+    margin: 50px auto;
+}
+
+a {
+    display: block;
+}
+
+.thumbnail {
+    width: 180px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+img {
+    display: block;
+}
