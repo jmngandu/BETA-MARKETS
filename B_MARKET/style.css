@@ -30,6 +30,10 @@
     font-weight: bold;
     font-size: 3rem;
     color:red;
+    padding-left: 10px;
+}
+.logo:hover{
+    color: crimson;
 }
 .nav-sec >ul {
     display: flex;
@@ -39,7 +43,7 @@
 .nav-sec >ul>li>a {
     padding: 10px;
     text-decoration: none;
-    color: brown;
+    color: black;
 } 
 .nav-sec a:hover{
     color: red;
@@ -52,8 +56,22 @@
     display: flex;
     flex-direction: column;
     font-size: 3rem;
+    align-items: center;
+   color: chocolate;
+   margin-top: 10vh;
 }
-
+#log-in-btn{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10vh;
+    cursor:wait;
+}
+#log-in-btn:hover{
+    background-color: coral;
+    color: white;
+}
 
 /*FOOTER SECTION*/
 .footer-section{
