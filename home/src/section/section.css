@@ -10,6 +10,15 @@ body{
     height: 100vh;
     
 }
+#starting{
+    background: #131720 url(/home/src/images/running.gif) no-repeat center center;
+    z-index: 100;
+    width: 100%;
+    height: 100vh; 
+    position: fixed;   
+    top: 0;   
+    bottom: 0;
+}
 /*SERVICES*/
 .services-container{
     width: 100%;
