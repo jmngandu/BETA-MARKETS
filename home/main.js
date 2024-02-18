@@ -1,3 +1,4 @@
+let connected = document.querySelector("#starting");
 let helpTag = document.getElementById("help-tag")
 helpTag.addEventListener("dblclick", () => {
     document.body.style.backgroundColor = 'grey';
@@ -10,8 +11,6 @@ helpTag.addEventListener("click", () => {
 })
 
 
-let faqs = document.getElementById("faqs")
-let storeFaqs = localStorage.setItem("faqs", "what is jthreeGlobally")
-let renderFaqs = localStorage.getItem("faqs")
-console.log(renderFaqs)
-localStorage.clear()
+window.addEventListener("load", function () {
+    connected.style.display = "none"
+})
