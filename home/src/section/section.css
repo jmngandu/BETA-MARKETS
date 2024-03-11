@@ -105,7 +105,6 @@ h1{
 }
 #client{
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 2rem;
     line-height: 3rem;
@@ -115,7 +114,7 @@ h1{
     align-items: center;
 }
 .input-tag{
-    width: 100%;
+    width: 250px;
     padding: 1rem 2rem;
     border-radius: 2rem;
     text-align: center;
@@ -123,13 +122,18 @@ h1{
     border: none;
 }
 .textarea{
-    width: 400px;
+    width: 300px;
     height: 300px;
     border-radius: 1rem;
     padding: 1rem 2rem;
     border: none;
     outline: none;
-    margin: 2rem;
+}
+.section-text{
+    margin-left: 2rem;
+}
+.text-section{
+  margin: 2rem;
 }
 #submit{
     padding: 1rem 3rem;

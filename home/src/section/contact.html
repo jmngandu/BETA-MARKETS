@@ -12,7 +12,8 @@
         <h1>Have some questions ?</h1>
         <div class="email-sect">
         <img src="/home/src/images/email.png"/>
-        <form id="client">
+        <form id="client" action="https://formspree.io/f/mbjnkzve" method="post">
+            <div class="section-text">
             <label for="text">Full Name</label>
             <input type="text" id=text placeholder="FULL NAME" class="text input-tag " name="input">
             <label for="tel" >Contact</label>
@@ -22,8 +23,12 @@
             <label for="email">Email</label>
             <input type="email" id="email" class="email input-tag" name="email">
             <button type="submit" id="submit">SEND MESSAGE</button>
+            </div>
+            <div class="text-section">
+            <textarea class="textarea" name="message">Your questions...</textarea>
+        </div>
         </form>
-        <textarea class="textarea">Your questions...</textarea>
+        
     </div>
     </div>
     
