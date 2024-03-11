@@ -92,3 +92,53 @@ h1{
         align-items: end;
     }
 }
+/*Contact section*/
+.customer{
+    text-align: center;
+    background-color: lightsteelblue;
+    width: 100%;
+    height: 100vh;
+}
+#logo-cont{
+    color: #ff7200;
+    text-decoration: none;
+}
+#client{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    line-height: 3rem;
+}
+.email-sect{
+    display: flex;
+    align-items: center;
+}
+.input-tag{
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+.textarea{
+    width: 400px;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    margin: 2rem;
+}
+#submit{
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 1rem;
+}
+#submit:hover{
+    background-color: #fff;
+    opacity: 0.4;
+    color: #ff7200;
+}
