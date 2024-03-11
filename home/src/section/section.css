@@ -203,6 +203,13 @@ small{
     opacity: 0.5;
    transition: 1s ease-out;
 }
+#subscribe{
+    display: flex;
+    justify-content: center;
+}
+.subscribe{
+    margin-right: 1rem;
+}
 @media (max-width:578px){
 #email-img{
     display: none;
