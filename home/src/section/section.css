@@ -109,6 +109,10 @@ h1{
     color: yellowgreen;
     text-decoration: none;
 }
+#email-img:hover{
+    scale: 1.1;
+    transition: 4s ease-in-out;
+}
 #client{
     display: flex;
     align-items: center;
@@ -151,5 +155,23 @@ h1{
     background-color: #fff;
     opacity: 0.4;
     color: #ff7200;
+    transition: 1s ease-in-out;
 }
 /*about section*/
+.about-sect{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-text{
+    padding: 1rem;
+    line-height: 2rem;
+    max-width: 1200px;
+    background-color: lightsteelblue;
+    margin: 2rem;
+}
+small{
+    text-align: center;
+}
