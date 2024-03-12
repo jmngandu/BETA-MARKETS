@@ -239,7 +239,7 @@ body{
         flex-direction: column;
         justify-content: center;
         height: 100vh;
-        background-color: yellow;
+        /* background-color: yellow; */
         margin: auto;
     }
     #copyright{
