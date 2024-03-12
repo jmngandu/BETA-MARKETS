@@ -203,6 +203,12 @@ body{
 .footer-section>h4>a{
     text-decoration: none;
 }
+#faqs a{
+    color:dimgray;
+}
+#faqs a:hover{
+    color: lightgrey;
 
+}
 
 
