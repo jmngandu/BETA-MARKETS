@@ -210,5 +210,41 @@ body{
     color: lightgrey;
 
 }
-
+@media (max-width:768px){
+    .navs{
+        display: none;
+    }
+    .hearder-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+       font-size:30px;
+    }
+    .srch{
+        width: 100px;
+        height: 20px;
+        margin-bottom: 2rem;
+    }
+    .btn-bar{
+        height: 22px;
+    }
+    .section-content h1{
+        font-size: 40px;
+        padding: 2rem;
+    }
+    .main-section{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        background-color: yellow;
+        margin: auto;
+    }
+    #copyright{
+        display: none;
+    }
+   
+}
 
