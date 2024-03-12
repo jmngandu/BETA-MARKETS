@@ -14,3 +14,19 @@ helpTag.addEventListener("click", () => {
 window.addEventListener("load", function () {
     connected.style.display = "none"
 })
+
+const barsMenu = document.querySelector(".fa-bars")
+const crossMenu = document.querySelector(".fa-xmark")
+const navs = document.querySelector(".navs")
+
+barsMenu.addEventListener("click", () => {
+    navs.style.display = "block"
+    barsMenu.style.display = "none"
+    crossMenu.style.display = "block"
+})
+crossMenu.addEventListener("click", () => {
+    navs.style.display = "none"
+    barsMenu.style.display = "flex"
+    crossMenu.style.display = "none"
+    window.scrollTo({top: 0, behavior: "smooth"})
+});

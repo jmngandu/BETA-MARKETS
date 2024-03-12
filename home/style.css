@@ -46,6 +46,13 @@ body{
     list-style-type: none;
 
 }
+.humberger-menu{
+  display: none;  
+}
+.fa-bars{
+    width: 1rem;
+    height: 1rem;
+}
 .navs>li{
     padding: 10px;
     margin-right: 10px;
@@ -211,9 +218,13 @@ body{
 
 }
 @media (max-width:768px){
-    .navs{
+    .navs, .fa-xmark{
         display: none;
     }
+    .humberger-menu{
+        display: block; 
+        margin: 1rem; 
+      }
     .hearder-section{
         display: flex;
         flex-direction: column;
@@ -228,6 +239,10 @@ body{
     }
     .btn-bar{
         height: 22px;
+    }
+    .nav-section{
+        display: flex;
+        width: 100%;
     }
     .section-content h1{
         font-size: 40px;
