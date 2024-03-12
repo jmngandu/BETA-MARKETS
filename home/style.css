@@ -245,6 +245,9 @@ body{
     #copyright{
         display: none;
     }
+    .lower-section{
+        width: 100%;
+    }
    
 }
 
