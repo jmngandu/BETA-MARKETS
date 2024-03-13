@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 
 const welcomeEl = document.getElementById("signup")
 const loginEL = document.querySelector(".loginEl")
-const signEL = document.getElementById("sign-btn")
+const signEL = document.querySelector(".signEL")
 
 welcomeEl.addEventListener("click", () => {
     alert("welcome to BETAMARKETS")
@@ -13,7 +13,6 @@ welcomeEl.addEventListener("click", () => {
 loginEL.addEventListener("click", () => {
     alert("logged in successfully")
 })
-
 
 signEL.addEventListener("click", () => {
     alert("account created")
