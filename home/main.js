@@ -18,6 +18,7 @@ window.addEventListener("load", function () {
 const barsMenu = document.querySelector(".fa-bars")
 const crossMenu = document.querySelector(".fa-xmark")
 const navs = document.querySelector(".navs")
+const joinEl = document.getElementById("main-btn")
 
 barsMenu.addEventListener("click", () => {
     navs.style.display = "block"
@@ -30,3 +31,8 @@ crossMenu.addEventListener("click", () => {
     crossMenu.style.display = "none"
     window.scrollTo({top: 0, behavior: "smooth"})
 });
+
+joinEl.addEventListener("click", () => {
+    prompt('Confirm your not a robot');
+    alert('Please wait ...');
+})
