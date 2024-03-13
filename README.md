@@ -1,3 +1,3 @@
 # BETA-MARKETS
-BETA  MARKETS is any online food delivery service
+BETA  MARKETS is an online food delivery service
 > You Ask We Deliver
