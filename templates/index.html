@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="././src/images/tomato.jpg"
+      href="{% static 'images/tomato.jpg' %}"
       type="image/x-icon"
     />
     <title>BETAMARKETS</title>
@@ -16,7 +18,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static "style.css" %}" />
   </head>
   <body>
     <!--HEADER SECTION-->
@@ -24,7 +26,8 @@
     <div class="wrapper">
       <div class="hearder-section">
         <div class="logo">
-          <a link href="index.html">BETA<span id="pr">MARKETS!</span></a>
+          <a link href="{% url "home" %}">BETA<span id="pr">MARKETS!</span></a>
+          <a link href="{% url 'logout' %}">Logout</a>
         </div>
         <div class="nav-section">
           <div class="humberger-menu">
@@ -34,12 +37,12 @@
           <ul class="navs">
             <li><a link="HOME" href="#">HOME</a></li>
             <li>
-              <a link="SERVICES" href="src/section/services.html">SERVICES</a>
+              <a link="SERVICES" href="{% url "services" %}">SERVICES</a>
             </li>
             <li>
-              <a link="CONTACT" href="src/section/contact.html">CONTACT</a>
+              <a link="CONTACT" href="{% url "contact" %}">CONTACT</a>
             </li>
-            <li><a link="ABOUT" href="src/section/about.html">ABOUT</a></li>
+            <li><a link="ABOUT" href="{% url "about" %}">ABOUT</a></li>
           </ul>
           <div class="search-bar">
             <input class="srch" type="search" placeholder="search" />
@@ -56,9 +59,18 @@
         <div class="section-content">
           <h1>Welcome all<br /><span>To BETA MARKETS!</span></h1>
           <p class="theme-sec"><b>You Ask We Deliver!</b></p>
-          <button id="main-btn">
-            <a href="./src/section/join.html">Join Us!</a>
-          </button>
+          {% comment %} <button id="main-btn">
+            <a href="{% url "login" %}">Join Us!</a>
+          </button> {% endcomment %}
+          {% if user.is_authenticated %}
+            <button id="main-btn">
+              <a href="{% url "home" %}">Go to Home</a>
+            </button>
+          {% else %}
+            <button id="main-btn">
+              <a href="{% url "login" %}">Join Us!</a>
+            </button>
+          {% endif %}
         </div>
         <div class="lower-section">
           <!-- <img src="./src/images/tomato.jpg" class="display-img"> -->
@@ -79,6 +91,6 @@
         <h4 id="help-tag"><a link="HELP" href="#">CHANGE THEME</a></h4>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="{% static "main.js" %}"></script>
   </body>
 </html>

@@ -12,7 +12,7 @@ body {
   font-family: "Inter", sans-serif;
 }
 #starting {
-  background: #131720 url(/src/images/food.gif) no-repeat center center;
+  background: #131720 url(/static/images/food.gif) no-repeat center center;
   z-index: 100;
   width: 100%;
   height: 100vh;
@@ -246,7 +246,7 @@ small {
 .join-wrapper {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/join.jpg);
+  background-image: url(/static/images/join.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -327,6 +327,7 @@ small {
   padding: 0.5rem;
   margin: 1rem;
 }
+
 @media (max-width: 578px) {
   .login {
     display: flex;
@@ -378,4 +379,37 @@ small {
     padding: 0.5rem;
     margin: 0.5rem;
   }
+}
+
+.messages {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.message.error {
+  background-color: #ff6b6b;
+}
+
+.message.success {
+  background-color: #51cf66;
+}
+
+.message.info {
+  background-color: #339af0;
+}
+
+.message.warning {
+  background-color: #fcc419;
 }
