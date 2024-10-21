@@ -1,22 +1,24 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BETAMARKETS</title>
-    <link rel="shortcut icon" href="../images/tomato.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/tomato.jpg' %}" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="section.css" />
+    <link rel="stylesheet" href="{% static 'section.css' %}" />
   </head>
   <body>
     <div class="about-sect">
       <h1>
-        <a href="../../index.html" class="logo-cont"
+        <a href="{% url "home" %}" class="logo-cont"
           >BETA<span id="pr">MARKETS</span></a
         >
       </h1>
@@ -60,7 +62,7 @@
         <div class="ranks">
           <div class="ceo rank-pages">
             <div class="more-top">
-              <img src="../images/userm.jpg" />
+              <img src="{% static 'images/userm.jpg' %}" />
               <h2>JAMES NGANDU</h2>
               <h2>CEO</h2>
             </div>
@@ -74,7 +76,7 @@
           </div>
           <div class="cto rank-pages">
             <div class="more-top">
-              <img src="../images/userm.jpg" />
+              <img src="{% static 'images/userm.jpg' %}" />
               <h2>KELVIN KIPSUNG</h2>
               <h2>CTO</h2>
             </div>
@@ -88,7 +90,7 @@
           </div>
           <div class="cfo rank-pages">
             <div class="more-top">
-              <img src="../images/userm.jpg" />
+              <img src="{% static 'images/userm.jpg' %}" />
               <h2>BRIAN WAFULA</h2>
               <h2>CFO</h2>
             </div>
@@ -101,7 +103,7 @@
           </div>
           <div class="coo rank-pages">
             <div class="more-top">
-              <img src="../images/userm.jpg" />
+              <img src="{% static 'images/userm.jpg' %}" />
               <h2>FRANKLIN KIMUTAI</h2>
               <h2>COO</h2>
             </div>
@@ -114,7 +116,7 @@
           </div>
           <div class="cmo rank-pages">
             <div class="more-top">
-              <img src="../images/userf.png" />
+              <img src="{% static 'images/userf.png' %}" />
               <h2>ALICE KAMALI</h2>
               <h2>CMO</h2>
             </div>
@@ -127,7 +129,7 @@
           </div>
           <div class="chro rank-pages">
             <div class="more-top">
-              <img src="../images/userm.jpg" />
+              <img src="{% static 'images/userm.jpg' %}" />
               <h2>FESTUS MULATYA</h2>
               <h2>CHRO</h2>
             </div>
@@ -141,7 +143,7 @@
           </div>
           <div class="cio rank-pages">
             <div class="more-top">
-              <img src="../images/userm.jpg" />
+              <img src="{% static 'images/userm.jpg' %}" />
               <h2>FRANCIS PAAN</h2>
               <h2>CIO</h2>
             </div>
