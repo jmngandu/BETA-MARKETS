@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{% static 'section.css' %}">
+</head>
+<body>
+    <div class="join-wrapper">
+        <h1><a href="{% url "home" %}" class="join">BETA<span id="pr">MARKETS</span></a></h1>
+        
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <!-- Start of the form -->
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="join-form" id="sign-section">
+                <div class="login">
+                    <img src="{% static 'images/userm.jpg' %}" alt="User icon"/>
+                    <h2>CREATE ACCOUNT</h2>
+                    
+                    <div class="log-form">
+                        <div class="left-log">
+                            <input type="text" class="input" id="sign-page" name="firstname" placeholder="FIRST NAME" aria-label="First Name" required>
+                            <input type="email" class="input" id="sign-page" name="email" placeholder="EMAIL" aria-label="Email" required>
+                            <input type="password" class="input" id="sign-page" name="password" placeholder="PASSWORD" aria-label="Password" required>
+                        </div>
+                        
+                        <div class="right-log">
+                            <input type="text" class="input" id="sign-page" name="lastname" placeholder="LAST NAME" aria-label="Last Name" required>
+                            <input type="tel" class="input" id="sign-page" name="number" placeholder="PHONE NUMBER" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" aria-label="Phone Number" required>
+                            <input type="password" class="input" id="sign-page" name="confirm_password" placeholder="CONFIRM PASSWORD" aria-label="Confirm Password" required>
+                        </div>
+                    </div>
+                    
+                    <button id="login-btn" class="signEL" type="submit">SIGN UP</button>
+                </div>
+            </div>
+        </form>
+        <!-- End of the form -->
+        
+    </div>
+    
+    <script src="{% static 'section.js' %}"></script>
+</body>
+</html>

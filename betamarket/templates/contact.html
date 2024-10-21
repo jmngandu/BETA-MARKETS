@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reach out</title>
+    <link rel="shortcut icon" href="{% static 'images/userm.jpg' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'section.css' %}" />
+  </head>
+  <body>
+    <h1>
+      <a href="{% url "home" %}" class="logo-cont"
+        >BETA<span id="pr">MARKETS</span></a
+      >
+    </h1>
+    <div class="customer">
+      <h1>Have some questions ?</h1>
+      <div class="email-sect">
+        <img src="{% static 'images/email.png' %}" id="email-img" />
+        <form
+          id="client"
+          action="https://formspree.io/f/mqakkjlk"
+          method="POST"
+        >
+          <div class="section-text">
+            <label for="text">Full Name</label>
+            <input
+              type="text"
+              id="text"
+              placeholder="FULL NAME"
+              class="text input-tag"
+              name="full_name"
+              required
+            />
+            <label for="tel">Contact</label>
+            <input
+              type="tel"
+              id="tel"
+              placeholder="TELEPHONE"
+              class="tel input-tag"
+              name="phone_number"
+            />
+            <label for="num">Street address</label>
+            <input
+              type="text"
+              id="num"
+              class="number input-tag"
+              name="street_address"
+              placeholder="STREET ADDRESS"
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="email input-tag"
+              name="email"
+              placeholder="YOUR EMAIL"
+              required
+            />
+            <section id="subscribe">
+              <input type="checkbox" class="subscribe" name="subscribe" checked />
+              <span>Receive emails</span>
+            </section>
+            <button type="submit" id="submit">SEND MESSAGE</button>
+          </div>
+          <div class="text-section">
+            <textarea class="textarea" name="message" placeholder="Your questions..."></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
