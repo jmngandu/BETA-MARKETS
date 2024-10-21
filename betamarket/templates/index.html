@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/tomato.jpg' %}"
+      type="image/x-icon"
+    />
+    <title>BETAMARKETS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="{% static "style.css" %}" />
+  </head>
+  <body>
+    <!--HEADER SECTION-->
+    <div id="starting"></div>
+    <div class="wrapper">
+      <div class="hearder-section">
+        <div class="logo">
+          <a link href="{% url "home" %}">BETA<span id="pr">MARKETS!</span></a>
+          <a link href="{% url 'logout' %}">Logout</a>
+        </div>
+        <div class="nav-section">
+          <div class="humberger-menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <ul class="navs">
+            <li><a link="HOME" href="#">HOME</a></li>
+            <li>
+              <a link="SERVICES" href="{% url "services" %}">SERVICES</a>
+            </li>
+            <li>
+              <a link="CONTACT" href="{% url "contact" %}">CONTACT</a>
+            </li>
+            <li><a link="ABOUT" href="{% url "about" %}">ABOUT</a></li>
+          </ul>
+          <div class="search-bar">
+            <input class="srch" type="search" placeholder="search" />
+            <a href="./src/section/services.html">
+              <button class="btn-bar">Search</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--MAIN SECTION-->
+
+      <div class="main-section">
+        <div class="section-content">
+          <h1>Welcome all<br /><span>To BETA MARKETS!</span></h1>
+          <p class="theme-sec"><b>You Ask We Deliver!</b></p>
+          {% comment %} <button id="main-btn">
+            <a href="{% url "login" %}">Join Us!</a>
+          </button> {% endcomment %}
+          {% if user.is_authenticated %}
+            <button id="main-btn">
+              <a href="{% url "home" %}">Go to Home</a>
+            </button>
+          {% else %}
+            <button id="main-btn">
+              <a href="{% url "login" %}">Join Us!</a>
+            </button>
+          {% endif %}
+        </div>
+        <div class="lower-section">
+          <!-- <img src="./src/images/tomato.jpg" class="display-img"> -->
+          <small>Enjoy The Taste!</small>
+        </div>
+      </div>
+
+      <!--FOOTER-->
+      <div class="footer-section">
+        <h4 id="faqs">
+          <a
+            link="FAQS"
+            href="https://www.healthline.com/nutrition/how-to-eat-healthy-guide"
+            >FAQS</a
+          >
+        </h4>
+        <p id="copyright">Copyright © 2024 | All rights reserved.</p>
+        <h4 id="help-tag"><a link="HELP" href="#">CHANGE THEME</a></h4>
+      </div>
+    </div>
+    <script src="{% static "main.js" %}"></script>
+  </body>
+</html>
